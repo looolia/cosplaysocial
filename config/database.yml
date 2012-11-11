@@ -10,7 +10,7 @@ development:
   database: cosplaysocial_development
   pool: 5
   username: root
-  password:
+  password: 
   host: localhost
   port: 3306
 
@@ -32,9 +32,9 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: cosplaysocial_development
+  database: cosplaysocial
   pool: 5
   username: root
-  password:
+  password: oresama1911
   host: localhost
   port: 3306
