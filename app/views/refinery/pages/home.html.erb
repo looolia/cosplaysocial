@@ -345,9 +345,9 @@
                        
                             </h2>
 
-                            <% cache "refinery/photo_gallery/albums/#{@photo_of_the_day_album.id}" do %> 
+                            <%# cache "refinery/photo_gallery/albums/#{@photo_of_the_day_album.id}" do %> 
                               <% @photo_of_the_day_latest.each_with_index do |photo, index|  %>
-                                <%= link_to (image_tag  photo.file.url(:album), :width => Refinery::PhotoGallery.single_dimensions[0], :height => Refinery::PhotoGallery.single_dimensions[1]  ), photo.file.single.url, {
+                                <%= link_to (image_tag  photo.file.url, :width => Refinery::PhotoGallery.single_dimensions[0], :height => Refinery::PhotoGallery.single_dimensions[1]  ), photo.file.single.url, {
                                   :target=> "_blank",
                                   :class=>"fancybox",
                                   :data =>{:title=> t('.image') + ' ' + photo.title + '<br/><br/>' + photo.description},
@@ -369,7 +369,7 @@
                                   </div>
                                 </div>
                               <% end %>
-                            <% end %>
+                            <%# end %>
 
                           <% end %>
                           <td width="4%">
@@ -386,9 +386,9 @@
                                 <div class="reportageIco2">
                                 </div>
                                 
-                                <% cache "refinery/photo_gallery/albums/#{@photo_series_of_the_day_album.id}" do %> 
+                                <%# cache "refinery/photo_gallery/albums/#{@photo_series_of_the_day_album.id}" do %> 
                                   <% @photo_series_of_the_day_latest.each_with_index do |photo, index|  %>
-                                    <%= link_to (image_tag  photo.file.url(:album), :width => Refinery::PhotoGallery.single_dimensions[0], :height => Refinery::PhotoGallery.single_dimensions[1]  ), photo.file.single.url, {
+                                    <%= link_to (image_tag  photo.file.url, :width => Refinery::PhotoGallery.single_dimensions[0], :height => Refinery::PhotoGallery.single_dimensions[1]  ), photo.file.single.url, {
                                       :target=> "_blank",
                                       :class=>"fancybox",
                                       :data =>{:title=> t('.image') + ' ' + photo.title + '<br/><br/>' + photo.description},
@@ -410,7 +410,7 @@
                                       </div>
                                     </div>
                                   <% end %>
-                                <% end %>
+                                <%# end %>
                             <% end %>
 
                         </table>
@@ -423,11 +423,11 @@
                       <div class="main_photo_day">
                         <div align="left" class="mainBestP" style="margin-top:40px;width:1020px">
                           <% if @editors_choice_album.present? %>
-                            <% cache "refinery/photo_gallery/albums/#{@editors_choice_album.id}" do %>
+                            <% #cache "refinery/photo_gallery/albums/#{@editors_choice_album.id}" do %>
                               <h2>
                                 <%= @editors_choice_album.title %>:
                               </h2>
-                            <% end %>
+                            <% #end %>
                             
                             <div id="photo_gallery">
                               <%# cache "refinery/photo_gallery/albums/#{@editors_choice_album.id}" do %>
@@ -467,7 +467,7 @@
                             <div class="livetimeSupport">
                               <table width="100%" cellpadding="0" cellspacing="0">
                                 <tr>
-                                  <% cache "refinery/photo_gallery/albums/#{@topical_album.id}" do %>
+                                  <%# cache "refinery/photo_gallery/albums/#{@topical_album.id}" do %>
                             
                                     <% @topical_latest.each_with_index do |photo, index|  %>
 
@@ -494,7 +494,7 @@
                                         <tr>
                                       <% end %>
                                     <% end %>
-                                  <% end %>
+                                  <%# end %>
 
                                 </table>
                             </div>
