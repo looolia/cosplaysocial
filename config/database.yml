@@ -36,5 +36,5 @@ production:
   pool: 5
   username: deployer
   password: oresama1911
-  host: localhsot
+  host: localhost
   port: 3306
