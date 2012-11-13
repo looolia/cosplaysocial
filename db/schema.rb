@@ -231,6 +231,53 @@ ActiveRecord::Schema.define(:version => 20121108133700) do
   add_index "refinery_photo_gallery_photos", ["album_id"], :name => "index_refinery_photo_gallery_photos_on_album_id"
   add_index "refinery_photo_gallery_photos", ["id"], :name => "index_refinery_photo_gallery_photos_on_id", :unique => true
 
+  create_table "refinery_portfolio_galleries", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.integer  "parent_id"
+    t.integer  "lft"
+    t.integer  "rgt"
+    t.integer  "depth"
+    t.string   "slug"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "user_id"
+  end
+
+  create_table "refinery_portfolio_gallery_translations", :force => true do |t|
+    t.integer  "refinery_portfolio_gallery_id"
+    t.string   "locale"
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+  end
+
+  add_index "refinery_portfolio_gallery_translations", ["locale"], :name => "index_refinery_portfolio_gallery_translations_on_locale"
+  add_index "refinery_portfolio_gallery_translations", ["refinery_portfolio_gallery_id"], :name => "index_dacf6685c3221de568049c599f2a69d1c1f9dd25"
+
+  create_table "refinery_portfolio_item_translations", :force => true do |t|
+    t.integer  "refinery_portfolio_item_id"
+    t.string   "locale"
+    t.string   "title"
+    t.text     "caption"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+  end
+
+  add_index "refinery_portfolio_item_translations", ["locale"], :name => "index_refinery_portfolio_item_translations_on_locale"
+  add_index "refinery_portfolio_item_translations", ["refinery_portfolio_item_id"], :name => "index_2f72df747b84672dbcc6cb153c8031486c5de521"
+
+  create_table "refinery_portfolio_items", :force => true do |t|
+    t.string   "title"
+    t.string   "caption"
+    t.integer  "image_id",   :null => false
+    t.integer  "gallery_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "position"
+  end
+
   create_table "refinery_resources", :force => true do |t|
     t.string   "file_mime_type"
     t.string   "file_name"

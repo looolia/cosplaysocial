@@ -21,7 +21,7 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: cosplaysocial_test
+  database: cosplaysocial_development
   pool: 5
   username: root
   password:
@@ -34,7 +34,7 @@ production:
   reconnect: false
   database: cosplaysocial
   pool: 5
-  username: root
+  username: deployer
   password: oresama1911
-  host: localhost
+  host: localhsot
   port: 3306
