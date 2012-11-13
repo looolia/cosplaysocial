@@ -23,8 +23,8 @@ Refinery::PhotoGallery.configure do |config|
   # config.delete_uploaded_file = true
 
   # Thumbs dimensions in pixels. E.g: [950,950] for width:950, height: 950
-  config.album_dimensions = [230, 230] # [140, 105]
-  config.preview_dimensions = [320, 320] # [210, 210]
+  config.album_dimensions = [320, 230] # [140, 105]
+  config.preview_dimensions = [230, 230] # [210, 210]
   config.single_dimensions = [500, 345] # [900, 900]
 
   # config.collections_per_page = 10
