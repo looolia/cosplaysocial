@@ -421,14 +421,15 @@
                       <div class="main_photo_day">
                         <div align="left" class="mainBestP" style="margin-top:40px;width:1020px">
                           <% if @editors_choice_album.present? %>
-                       
+                            <% cache "refinery/photo_gallery/albums/#{@editors_choice_album.id}" do %>
                               <h2>
                                 <%= @editors_choice_album.title %>:
                               </h2>
-                          
+                            <% end %>
                             
                             <div id="photo_gallery">
-                             
+                              <%# cache "refinery/photo_gallery/albums/#{@editors_choice_album.id}" do %>
+                            
                                 <% @editors_choice_latest.each_with_index do |photo, index|  %>
                                   <div class="mainBestItem">
                                     <div style="padding-bottom:20px">
@@ -451,7 +452,7 @@
                                     </div>
                                   </div>
                                 <% end %>                       
-                              
+                              <%# end %>
                             </div>
                           <% end %>
                     
