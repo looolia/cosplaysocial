@@ -1,0 +1,47 @@
+<tr>
+  <td style="padding:20px 20px 20px 20px" colspan="2">
+    <div align="center">
+      
+      <div id="flash_container">
+          <%= render '/refinery/message' %>
+      </div>
+      
+      <div style="max-width:300px;height:240px;padding-left:50px;padding:20px;background:#fff;border-radius: 15px;-moz-border-radius: 15px; -webkit-border-radius: 15px;box-shadow:2px 2px 3px rgba(0,0,0,0.4);-webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.4);-moz-box-shadow: 2px 2px 3px rgba(0,0,0,0.4); color:#333;margin:80px 0 100px 0">
+        <div style="width:500px;height:200px" align="center">
+          <div align="left">
+            <div style="float:left;width:230px;height:200px">
+
+              <%= form_for resource, :as => resource_name,
+                                     :url => refinery.refinery_user_session_path do |f| %>
+                <div style="margin-top:10px;">
+                  <%= f.label :login %>
+                  <%= f.text_field :login, :style => "width:180px;font-size:18px", :id => "refinery_user_login", :name => "refinery_user[login]" %>
+                </div>
+                <div style="margin-top:10px;">
+                  <%= f.label :password %>
+                  <%= f.password_field :password, :autocomplete => 'off', :style => "width:180px;font-size:18px", :id => "refinery_user_password", :name => "refinery_user[password]" %>
+                </div>
+                <div class='clearfix'>
+                  <% if devise_mapping.rememberable? %>
+                    <div class='field remember_me' style="display:inline-block;">
+                      <%= f.check_box :remember_me, :id => "refinery_user_remember_me", :name => "refinery_user[remember_me]" %>
+                      <%= f.label :remember_me, :class => "checkbox inline", :style => "margin-left:-20px" %>
+                    </div>
+                  <% end %>
+                  <div style="margin-top:10px;font-size:11px">
+                    <%= link_to t('.forgot_password'), refinery.new_refinery_user_password_path %> &nbsp;&nbsp; 
+                    <%= link_to "Registration", refinery.new_refinery_user_registration_path, :style => "font-size:14px;" %>
+                  </div>
+                </div>
+                <div style="margin-top:10px;">
+                  <input id="submit_button" type="submit" value="Sign in">
+                </div>
+              <% end -%>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>

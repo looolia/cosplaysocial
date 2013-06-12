@@ -1,4 +1,42 @@
-<%= will_paginate @albums %>
-<ul>
-  <%= render :partial => 'album', :collection => @albums %>
-</ul>
+<table width="100%" cellpadding="0" cellspacing="0"><tbody><tr>
+      <td width="19%" valign="top">
+        
+
+        <div style="margin:0px 0 15px 0;">
+          <span style="font-size:16px;color:#eee" title="Кол-во просмотров"><img src="http://35photo.ru/files/icoSee.png"> 1017</span> &nbsp;&nbsp;&nbsp; <span style="font-size:16px;color:#eee" title="В избранном"><img src="http://35photo.ru/files/icoFav.png"> 1</span>
+        </div>
+        <img class="avatorBig" src="http://35photo.ru/profile/photos/35700.jpg">
+      </td>
+      <td width="38px">
+      </td>
+      <td valign="top">
+        <div class="livetimeSupport">
+          <table width="100%" cellpadding="0" cellspacing="0">
+          <tbody>
+          <tr>
+            <td>
+              <div>
+                
+                <%= will_paginate @albums %>
+
+                <% if user_is_admin? %>
+                  <%= render :partial => 'album', :collection => @albums %>
+                <% else %>
+                  <%= render :partial => 'album', :collection => @albums.where(:user_id => @user.id) %>
+                <% end %>
+
+              </div>
+            </td>
+          </tr>
+          </tbody>
+          </table>
+        </div>
+        <br style="clear:both">
+      </td>
+ 
+
+ </tr>
+</tbody>
+</table>
+
+

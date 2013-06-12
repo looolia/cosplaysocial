@@ -10,31 +10,34 @@ development:
   database: cosplaysocial_development
   pool: 5
   username: root
-  password: 
+  password: oresama1911
   host: localhost
   port: 3306
+  #adapter: sqlite3
+  #database: db/development.sqlite3
+  #timeout: 5000
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  database: cosplaysocial_development
-  pool: 5
-  username: root
-  password:
-  host: localhost
-  port: 3306
+#test:
+#  adapter: mysql2
+#  encoding: utf8
+#  reconnect: false
+#  database: cosplaysocial_development
+#  pool: 5
+#  username: root
+#  password:  oresama1911
+#  host: localhost
+#  port: 3306
 
-production:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  database: cosplaysocial
-  pool: 5
-  username: deployer
-  password: oresama1911
-  host: localhost
-  port: 3306
+#production:
+#  adapter: mysql2
+#  encoding: utf8
+#  reconnect: false
+#  database: cosplaysocial
+#  pool: 5
+#  username: deployer
+#  password: oresama1911
+#  host: localhost
+#  port: 3306

@@ -7,6 +7,15 @@ Cosplaysocial::Application.routes.draw do
   # We ask that you don't use the :as option here, as Refinery relies on it being the default of "refinery"
   mount Refinery::Core::Engine, :at => '/'
 
+  Refinery::Core::Engine.routes.draw do
+    #resource :photo, :only => [:show]
+    match "/photos/:id" => "photos#show", :controller => "photos", :action => "show"
+  end
+
+  resources :photos do
+    resources :comments
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -63,4 +72,5 @@ Cosplaysocial::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
+
 end

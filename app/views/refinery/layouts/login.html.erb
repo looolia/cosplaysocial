@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<%= render '/refinery/html_tag' %>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+  <%= render '/refinery/head' %>
+
+  <style>
+    .flash_error, .flash_alert {
+      border: 1px solid #A00027;
+      color: #A00027;
+      background: 7px 7px no-repeat url(/assets/refinery/icons/cancel.png) #FFB1B1;
+    }
+
+    #message, .flash {
+      padding: 8px 8px 8px 30px;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .flash_message, .flash_notice {
+      border: 1px solid #00A017;
+      color: #00A017;
+      background: 7px 7px no-repeat url('/images/refinery/icons/accept.png') #E0F5E0;
+    }
+
+
+  </style>
+
+  <body bgcolor="#3A3A3A" link="#58ACFF" vlink="#44617D" topmargin="0" rightmargin="0" leftmargin="0" bottommargin="0" >
+    <div style="background:#666666; height:8px">
+      <spacer type="block">
+      </spacer>
+    </div>
+    <div id='tooltip_container'></div>
+    <table width="100%" cellpadding="0" cellspacing="0">
+      <tr>
+      <header id="header">
+        <%= render 'refinery/menu' %>
+      </header>
+
+      <div id="page_container">
+        <div id="page">
+          <div id="content" class="clearfix">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </table>
+  </body>
+</html>

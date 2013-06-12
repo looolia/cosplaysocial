@@ -1,31 +1,61 @@
-<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(album) -%>">
-  <span class='title'>
-    <%= album.title %>
-     <%#= album.photos.count %>
-    <span class="preview">
-      <%= album.created_at.try(:strftime, '%b %d, %Y') %>
-    </span>
-  </span>
-  <span class='actions'>
-    <%#= link_to refinery_icon_tag("application_go.png"), refinery.photo_gallery_album_path(album),
-        :title => t('.view_live_html'),
-        :target => "_blank" %>
+<div class="photos_div">
+  <% if album_last_photo(album.id) %>
+    <div class="reportageIco2">
+    </div>
+    <a href="http://vinogradovmakar.35photo.ru/photo_418634/"><img class="prevr2" idb="poi273_418634" src="<%= album_last_photo(album.id).file.single.url%>"></a>   
+  <% else %>
+    <img class="prevr2" idb="poi273_418634" src="/system/refinery/photo_gallery/no_image.png">
+  <% end %>
 
-    <%= link_to (image_tag 'refinery/photo_gallery/admin/icons/photo_add.png'),
-                refinery.upload_photo_gallery_admin_album_photos_path(album),
-                :title => t('.upload_photos') %>
-    <%= link_to (image_tag 'refinery/photo_gallery/admin/icons/photo_edit.png'),
-                refinery.edit_multiple_photo_gallery_admin_album_photos_path(album),
-                :title => t('.edit_photos') %>
-    <%= link_to (image_tag 'refinery/photo_gallery/admin/icons/album_edit.png'),
-                refinery.edit_photo_gallery_admin_album_path(album),
-         :title => t('.edit') %>
-    <%= link_to refinery_icon_tag("delete.png"), refinery.photo_gallery_admin_album_path(album),
-        :class => "cancel confirm-delete",
-        :title => t('.delete'),
-        :method => :delete,
-        :data => {
-          :confirm => t('message', :scope => 'refinery.admin.delete', :title => album.title)
-        } %>
-  </span>
-</li>
+  <div style="clear: left">
+  </div>
+  <div class="photos_info">
+  </div>
+  <div class="photo_other_info photo_hide" id="poi273_418634">
+    <div class="photos_time_add">
+      <span style="background-color:#000"><%= album.created_at.try(:strftime, '%b %d, %Y') %></span>
+      <span style="background-color:#000">Комм.: 1 / Просм.: 719</span>
+    </div>
+  </div>
+  <div class="photos_info2">
+    <div style="clear: left">
+    </div>
+    <div class="photos_text">
+      <a href="http://vinogradovmakar.35photo.ru/photo_418634/">
+      <div class="photos_info_desc">
+        <%= album.title %>
+      </div>
+      </a>
+      <div class="photo_author">
+        Vinogradov Makar
+      </div>
+    </div>
+  </div>
+  <div class="photos_rating">
+    48
+    <span class='actions'>
+      <%#= link_to refinery_icon_tag("application_go.png"), refinery.photo_gallery_album_path(album),
+          :title => t('.view_live_html'),
+          :target => "_blank" %>
+
+      <%= link_to (image_tag 'refinery/photo_gallery/admin/icons/photo_add.png'),
+                  refinery.upload_photo_gallery_admin_album_photos_path(album),
+                  :title => t('.upload_photos') %>
+      <%= link_to (image_tag 'refinery/photo_gallery/admin/icons/photo_edit.png'),
+                  refinery.edit_multiple_photo_gallery_admin_album_photos_path(album),
+                  :title => t('.edit_photos') %>
+      <%= link_to (image_tag 'refinery/photo_gallery/admin/icons/album_edit.png'),
+                  refinery.edit_photo_gallery_admin_album_path(album),
+           :title => t('.edit') %>
+      <%= link_to refinery_icon_tag("delete.png"), refinery.photo_gallery_admin_album_path(album),
+          :class => "cancel confirm-delete",
+          :title => t('.delete'),
+          :method => :delete,
+          :data => {
+            :confirm => t('message', :scope => 'refinery.admin.delete', :title => album.title)
+          } %>
+    </span>
+  </div>
+
+  
+</div>

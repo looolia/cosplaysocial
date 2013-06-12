@@ -1,0 +1,128 @@
+<tr>
+  <td style="padding:20px 20px 0px 20px">
+    <a href="http://35photo.ru/">
+      <img src="http://35photo.ru/files/logo2.gif" alt="35photo.ru - Photo site" width="142" height="35" style="margin-right:15px;" align="left">
+    </a>
+    <a href="http://35photo.ru/shuffle/" title="Shuffle" class="ico_shuffle">
+    </a>
+    <img src="http://35photo.ru/files/socialnet.png" style="padding-top:10px;">
+    <div style="clear:both">
+    </div>
+     <div style="float:right;width:240px;margin-right:20px">
+      <div align="right">
+        <div align="left">
+          <a href="http://vinogradovmakar.35photo.ru/"><img class="avator" style="width:30px;height:30px;margin-right:10px;" src="http://35photo.ru/profile/photos/35700_48.jpg" align="left"></a><img src="http://35photo.ru/files/mail_i.gif"><a href="http://35photo.ru/profile/message/" onclick="showMessages(); return false;">Messages: 1</a><br>
+          <div style="position:absolute;">
+            <div style="display:none;width:250px;background:#f0f0f0;margin-left:-10px;" id="newMessagesM" class="boxshadow">
+              <div id="newMessages" class="newMessages">
+                <div align="center" style="padding:20px">
+                  <img src="http://35photo.ru/files/loadingWhite.gif">
+                </div>
+              </div>
+              <div style="background:#ddd;padding:5px;" align="center">
+                <a style="color:#666;font-size:11px;" href="http://35photo.ru/profile/message/">все сообщения</a>
+              </div>
+            </div>
+          </div>
+          <span><b><a href="http://vinogradovmakar.35photo.ru/" style="text-decoration:none;">Vinogradov Makar</a></b><br>
+          <span class="subMenu"><a style="text-decoration:none;color:#aaa;border-bottom:1px dashed #999" href="http://35photo.ru/profile/">Profile</a> &nbsp;<img src="http://35photo.ru/files/downArrow.gif">
+          <div class="sub subAccount">
+            <ul>
+              <li><a href="http://35photo.ru/profile/"><i class="icon-film"></i> Timeline</a></li>
+              <li><a href="http://35photo.ru/profile/message/out/"><i class="icon-inbox"></i> Messages</a></li>
+              <li><a href="http://35photo.ru/profile/options/"><i class="icon-cog"></i> Settings</a></li>
+              <li style="border-top:1px solid #bbb"><i class="icon-user"></i><a href="http://vinogradovmakar.35photo.ru/">Edit profile</a></li>
+              <li style="border-top:1px solid #bbb"><i class="icon-off"></i><a href="?act3=exit">Exit</a></li>
+            </ul>
+          </div>
+          </span></span>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:10px;font-size:12px">
+      <div class="menuBlock">
+  
+        <span class="mainMenu">
+          <a href="http://35photo.ru/community/" style="border-bottom-width: 0px; color: rgb(153, 153, 153); font-size:16px;">
+            Communities
+          </a>
+        </span>
+        
+        <span class="mainMenu">
+          <a href="http://35photo.ru/new/interesting/" style="border-bottom-width: 0px; color: rgb(153, 153, 153); font-size:16px;">
+            New photos
+          </a>
+          
+          <img src="http://35photo.ru/files/downArrow.gif">
+          <div class="sub">
+            <ul>
+              <li>
+                <a href="http://35photo.ru/new/interesting/">
+                  New interesting
+                </a>
+              </li>
+              <li>
+                <a href="http://35photo.ru/new/">
+                  New photos
+                </a>
+              </li>
+              <li>
+                <a href="http://35photo.ru/new/journal/">
+                  Journal
+                </a>
+              </li>
+            </ul>
+          </div>
+        </span>
+        
+        <span class="mainMenu">
+          <a href="http://35photo.ru/new/actual/" style="border-bottom-width: 0px; color: rgb(153, 153, 153); font-size:16px;">
+            Topical
+          </a>
+        </span>
+    
+      </div>
+    </div>
+    
+   
+
+
+
+
+<tr>
+  <td style="padding:20px 20px 20px 20px" colspan="2">
+    <div style="height:55px;font-family:Arial;font-size:12px;">
+      <a href="http://vinogradovmakar.35photo.ru/"><img class="avator" style="margin-right:10px" align="left" src="http://35photo.ru/profile/photos/35700_48.jpg"></a>
+      <div style="height:55px;float:left;">
+        <h1 style="margin:3px 0 10px 0;line-height:22px;font-size:22px;font-family:'PFDinTextCondPro-Medium',Arial;text-transform:uppercase;color:#eee;">Vinogradov Makar</h1>
+        <div>
+          <% ::Refinery::Plugins.active.in_menu.each do |plugin| -%>
+            <span class="mainMenu<%= "A" if plugin.highlighted?(params) %>_2">
+              <%= link_to plugin.title, refinery.url_for(plugin.url),
+                      #:class => ("mainMenuA" if plugin.highlighted?(params)),
+                      :id => "plugin_#{plugin.name}" %>
+            </span>
+          <% end -%>
+
+          <span class="mainMenuA_2"><a href="http://vinogradovmakar.35photo.ru/">Фото</a></span><span class="mainMenu_2"><a href="http://vinogradovmakar.35photo.ru/journal/">Журнал</a></span><span class="mainMenu_2"><a href="http://vinogradovmakar.35photo.ru/albums/">Альбомы</a></span><span class="mainMenu_2"><a href="http://vinogradovmakar.35photo.ru/favourite/">Избранное</a></span><span class="mainMenu_2"><a href="http://vinogradovmakar.35photo.ru/user_profile/">Профиль</a></span>
+        </div>
+      </div>
+      <div class="clear">
+      </div>
+    </div>
+    <div style="height:20px;" align="center">
+    </div>
+  
+
+    <div style="clear:both; height:20px;">
+    </div>
+  
+
+
+  </td>
+</tr>
+
+
+
+

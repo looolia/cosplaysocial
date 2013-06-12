@@ -1,0 +1,107 @@
+#actions {
+  float: right;
+  width: 280px;
+  padding-left: 15px;
+  padding-top: 0px;
+  margin-right: 20px;
+  ul {
+    margin: 0px 0px 18px 0px;
+    padding: 0;
+    list-style: none;
+    &#current_locale {
+      margin-top: 30px;
+    }
+  }
+  li {
+    margin-top: 10px;
+    a {
+      text-decoration: none;
+      font-size: 16px;
+      color: #A3B095;
+      border: none;
+      border-bottom: 1px dashed #A3B095;
+      padding-bottom: 2px;
+      background-color: transparent;
+      background-position: 12px;
+      background-repeat: no-repeat;
+      display: block;
+      padding: 9px 12px 9px 36px;
+      &:hover {
+        background-color: transparent;
+      }
+      &:active {
+        background-color: transparent;
+        color: white;
+      }
+      img {
+        vertical-align: bottom;
+        border: 0;
+      }
+    }
+    &.selected a {
+      background-color: transparent;
+      color: white;
+    }
+  }
+}
+
+#page_container {
+  width: 100%;
+  padding: 0px 0px;
+  margin-left: 0px;
+}
+
+#albums_index_main_content { 
+  position: absolute;
+  min-width: 940px;
+  padding: 30px 15px;
+}
+
+#albums_new_main_content, #albums_edit_main_content, #collections_new_main_content, 
+#collections_edit_main_content, #collections_index_main_content, #photos_upload_main_content, 
+#photos_edit_multiple_main_content, #posts_index_main_content, #categories_form_main_content,
+#categories_index_main_content, #comments_index_main_content, #comments_show_main_content {
+  min-width: 400px;
+  width: 50%;
+  margin: 0px auto;
+}
+
+#posts_form_main_content {
+  min-width: 600px;
+  width: 60%;
+  margin: 0px auto;
+}
+
+#main_content, #site_bar_content, header {
+  margin-left: 30px;
+  text-align: left;
+  min-width: 990px;
+  width: 100%;
+}
+
+.livetimeSupport, .photos_div {
+  margin: 0 auto;
+}
+
+.pagination {
+  width: 100%;
+  background-color: transparent !important;
+}
+
+#content h2, label, p, strong {
+  color: #eee;
+}
+
+#records {
+  width: 75%;
+}
+
+.plupload_header_title, .plupload_header_text, #photos_count {
+  color: #eee !important;
+}
+
+#content .form-actions, .wym_dialog .form-actions, .ui-dialog .form-actions {
+  background-color: transparent;
+  border: none;
+}
+

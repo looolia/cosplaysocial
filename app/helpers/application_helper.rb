@@ -19,9 +19,17 @@ module ApplicationHelper
 
     @topical_album = Refinery::PhotoGallery::Album.where(:id => "4").first
     unless @topical_album.nil?
-      @topical_latest = @topical_album.photos.find(:all, :order => "created_at DESC", :limit => 8)
+      @topical_latest = @topical_album.photos.find(:all, :order => "created_at DESC", :limit => 12)
     end
 
+  end
+
+  def user_signed_in?
+    if session["warden.user.refinery_user.key"]
+      return true
+    else
+      return false
+    end
   end
 
   def album_last_photo(album_id)

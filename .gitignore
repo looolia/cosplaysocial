@@ -28,9 +28,10 @@ doc/app
 .yardopts
 coverage
 
-# Public Uploads
-# public/system/*
-# public/themes/*
+# Public Uploads ### maybe comment
+public/system/*
+public/themes/*
+public/assets/*
 
 # Public Cache
 public/javascripts/cache

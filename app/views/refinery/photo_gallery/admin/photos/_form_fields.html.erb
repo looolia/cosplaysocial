@@ -15,13 +15,6 @@
           <%= p.text_area :description, :rows => "5", :cols=> "57" %>
         </div>
 
-        <div class='field-group'>
-            <%= p.label :longitude, :tooltip=> t('.use_decimal_format') %>
-            <%= p.text_field :longitude, :size=> 13 %>
-
-            <%= p.label :latitude , :tooltip=> t('.use_decimal_format') %>
-            <%= p.text_field :latitude, :size=> 13  %>
-        </div>
 
 
         <%= render :partial => "form_fields_actions", :locals => { :photo => photo } %>

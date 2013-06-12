@@ -47,16 +47,6 @@
         <%= f.text_area :address, { :rows => 3} %><br />
       </div>
 
-      <div class='field'>
-        <%= f.label :latitude %><br />
-        <%= f.text_field :latitude %><br />
-      </div>
-
-      <div class='field'>
-        <%= f.label :longitude %><br />
-        <%= f.text_field :longitude %><br />
-      </div>
-
 
       <div class='field'>
         <%= f.label :note %><br />
@@ -66,8 +56,9 @@
 
 
     <br />
-    <%= t('.number_of_photos', :number=> album_photos_count ) %><br/>
-
+    <div id="photos_count">
+      <%= t('.number_of_photos', :number=> album_photos_count ) %><br/>
+    </div>
 
     <%= render :partial => "/refinery/admin/form_actions",
                :locals => {

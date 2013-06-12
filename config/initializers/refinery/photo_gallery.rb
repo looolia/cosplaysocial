@@ -20,7 +20,7 @@ Refinery::PhotoGallery.configure do |config|
   # config.photo_gallery_dir = "/system/refinery/photo_gallery"
 
   # After file uploading, there are created 4 versions of this image. If you are not going to recreate this thumbs, delete original uploaded file to save space on disk.
-  # config.delete_uploaded_file = true
+  config.delete_uploaded_file = false
 
   # Thumbs dimensions in pixels. E.g: [950,950] for width:950, height: 950
   config.album_dimensions = [320, 230] # [140, 105]

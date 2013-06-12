@@ -4,4 +4,8 @@ Refinery::PhotoGallery::Photo.class_eval do
 
   attr_accessible :user_id
 
+  acts_as_commentable
+
+  has_many :comments,  class_name: "Comment"  , primary_key: "id"
+
 end

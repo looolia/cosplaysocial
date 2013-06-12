@@ -7,7 +7,7 @@ gem 'rails', '3.2.8'
 
 #group :development, :test do
 gem 'mysql2'
-  #gem 'sqlite3'
+#gem 'sqlite3'
 #end
 
 #group :production do
@@ -48,6 +48,8 @@ gem 'rvm-capistrano'
 # To use debugger
 # gem 'debugger'
 
+gem 'acts_as_commentable_with_threading'
+
 # Refinery CMS
 gem 'refinerycms', '~> 2.0.3'
 
@@ -61,3 +63,4 @@ gem 'refinerycms-page-images', '~> 2.0.0'
 
 #gem 'refinerycms-photo-gallery', :git => 'git://github.com/Matho/refinerycms-photo-gallery.git'
 gem 'refinerycms-photo-gallery', '~> 0.1.0', :git => 'git://github.com/Matho/refinerycms-photo-gallery.git', :branch=>'0-1-stable'
+#gem 'refinerycms-photo-gallery', '~> 0.1.0'
